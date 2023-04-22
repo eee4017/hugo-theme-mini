@@ -250,6 +250,7 @@ nav.navigation {
   display: flex;
   padding: 0;
   text-align: right;
+  font-family: 'Source Code Pro', 'Noto Sans TC', Courier, monospace;
   z-index: 100;
   justify-content: space-between;
 }
@@ -315,21 +316,22 @@ nav.navigation a.button {
 .profile .inner {
   width: 80%;
   justify-content: space-between;
-  /* align-items: center; */
   align-items: flex-end;
   background-color: var(--color-dark);
 }
 
-.profile .avatar {
-  display: inline-block;
-  height: 60%;
-  margin: 1em 0em;
+.avatar-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--header-height);
 }
 
-@media (max-width: 700px) {
-  .profile .avatar {
-    height: 50%;
-  }
+.avatar {
+  display: inline-block;
+  height: 100%;
+  width: auto;
+  padding: 1em 0em;
 }
 
 .profile h1 {
