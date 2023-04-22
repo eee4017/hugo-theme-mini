@@ -27,7 +27,8 @@
           {{ if $paginator.HasPrev }}
               <span class="prev">
                   <a href="{{.Paginator.Prev.URL}}">
-                    {{ with .Site.Params.newerPosts }}{{ . }}{{ else }}{{ i18n "postsNewer" }}{{ end }}
+                  <span class="arrow">←</span>
+                  {{ with .Site.Params.newerPosts }}{{ . }}{{ else }}{{ i18n "postsNewer" }}{{ end }}
                   </a>
             </span>
           {{ end }}

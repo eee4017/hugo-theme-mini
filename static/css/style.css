@@ -99,6 +99,10 @@ hr {
   background: var(--color-lightest);
 }
 
+.date {
+  font-family: 'Source Code Pro', 'Noto Sans TC', Courier, monospace;
+}
+
 table {
   width: 100%;
   margin: 40px 0;
