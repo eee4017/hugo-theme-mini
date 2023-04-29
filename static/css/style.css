@@ -413,6 +413,7 @@ nav.navigation a.button {
   overflow-wrap: anywhere;
   margin-bottom: 36px;
   font-weight: var(--font-weight-light);
+  letter-spacing: 0.05em;
 }
 
 #list-page .cover {
