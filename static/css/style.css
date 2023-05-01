@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;600&family=Zen+Old+Mincho:wght@600&family=Source+Code+Pro&Noto+Sans+TC:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;600&family=Source+Code+Pro&Noto+Sans+TC:wght@600&display=swap');
 
 :root {
   --color-lightest: #fcfcfc;
@@ -173,11 +173,15 @@ table tr:last-child td {
   font-size: 2em;
 }
 
+h1 {
+  font-size: 2em;
+}
+
 .title,
 h1,
 h2,
 h3 {
-  font-family: 'Zen Old Mincho', serif;
+  font-family: 'Noto Serif TC', serif;
   font-weight: var(--font-weight-bold);
 }
 
@@ -370,7 +374,7 @@ nav.navigation a.button {
 
 /* index post list */
 #list-page {
-  max-width: 80%;
+  width: 80%;
   flex-grow: 1;
   margin: 0;
   padding-top: 3%;
@@ -575,7 +579,7 @@ nav.navigation a.button {
 
 
 #archive {
-  max-width: 580px;
+  width: 80%;
   margin: 0 auto;
   padding: 0 24px;
 }
