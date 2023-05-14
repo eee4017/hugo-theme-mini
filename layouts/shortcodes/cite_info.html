@@ -1,0 +1,13 @@
+<!-- layouts/shortcodes/cite_info.html -->
+{{ $.Page.Scratch.Add "ref_num" 1 }}
+{{ $.Page.Scratch.SetInMap "refs" (.Get "label") ($.Page.Scratch.Get "ref_num") }}
+{{ $citation := (dict "ref_num" ($.Page.Scratch.Get "ref_num") "author" (.Get "author") "year" (.Get "year") "title" (.Get "title") "journal" (.Get "journal") "volume" (.Get "volume") "issue" (.Get "issue") "pages" (.Get "pages") "doi" (.Get "doi"))}}
+
+{{ with $.Page.Scratch.Get "citations_slice" }}
+  {{ $citations_slice := . }}
+  {{ $citations_slice = $citations_slice | append $citation }}
+  {{ $.Page.Scratch.Set "citations_slice" $citations_slice  }}
+
+{{ else }}
+  {{ $.Page.Scratch.Set "citations_slice" (slice $citation) }}
+{{ end }}

@@ -6,7 +6,7 @@
     {{ $paginator := .Paginate ($pages) }}
     {{ range $paginator.Pages }}
         {{ $title := .Title }}
-        {{ $summary := .Summary }}
+        {{ $abstract := .Params.abstract }}
         <section class="item">
           <div>
             <h1 class="title"><a href='{{ .RelPermalink }}'>{{ $title }}</a></h1>
@@ -16,7 +16,7 @@
           </div>
 
           {{ if ne .Site.Params.hiddenPostSummaryInHomePage true }}
-              <div class="summary">{{ $summary | plainify | htmlUnescape }}</div>
+              <div class="summary">{{ $abstract | plainify | htmlUnescape }}</div>
           {{ end }}
 
         </section>

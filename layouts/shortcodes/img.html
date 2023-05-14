@@ -1,3 +1,4 @@
-{{- $src := .Get "src" -}}
-{{- $css := .Get "css" -}}
-<img src="{{ $src }}" class="{{ .Get "class" }}-image" style="{{ $css | safeCSS }}"/>
+<div class="grid-item {{ .Get "alter" }}">
+    <img src="{{ .Get "src" }}">
+    {{ with .Get "title" }}<span class="image-title">{{ . }}</span>{{ end }}
+</div>

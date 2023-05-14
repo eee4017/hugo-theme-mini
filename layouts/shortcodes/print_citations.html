@@ -1,0 +1,15 @@
+<!-- layouts/shortcodes/print_citations.html -->
+<h1>References</h1>
+{{ range $.Page.Scratch.Get "citations_slice" }}
+<div id="ref-{{ .ref_num }}" class="citation">
+    [{{ .ref_num }}]
+    {{ with .author }}<strong>{{ . }}</strong>{{ end }} 
+    {{ with .year }}({{ . }}).{{ end }} 
+    {{ with .title }}{{ . }}.{{ end }}
+    {{ with .journal }}<i>{{ . }}</i>,{{ end }}
+    {{ with .volume }}{{ . }}{{ end }}
+    {{ with .issue }}({{ . }}),{{ end }}
+    {{ with .pages }}{{ . }}.{{ end }}
+    {{ with .doi }}<a href="https://doi.org/{{ . }}">https://doi.org/{{ . }}</a>{{ end }}
+</div>
+{{ end }}

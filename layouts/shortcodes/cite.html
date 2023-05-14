@@ -1,0 +1,2 @@
+{{- $ref_num := index ($.Page.Scratch.Get "refs") (.Get "label") -}}
+<a href="#ref-{{ $ref_num }}" id="ref-{{ $ref_num }}-inline" class="citation-inpage-ref">[{{ index ($.Page.Scratch.Get "refs") (.Get "label") }}]</a>
